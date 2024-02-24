@@ -14,6 +14,7 @@ def word_split(text):
 def text_process_save_comma(text):  
     text = re.sub("\[|\]|'|"," ",text).replace(" ", "")   
     text = re.sub(r'[0-9]+'," ",text).replace(" ", "")    
+    text = re.sub(r'[.]+'," ",text).replace(" ", "")    
     return text
 
 # Text process, ใช้ deepcut.tokenize() เพื่อแบ่งคำใน(text) เป็น(tokens) โดยใช้ตัวตัดคำจาก deepcut
